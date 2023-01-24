@@ -1,0 +1,6 @@
+<launch>
+    <!-- <node pkg="autoturtle" name="sim" type="swim_school.py"/> -->
+    <node pkg="turtlesim" name="sim2" type="turtlesim_node"/>
+    <node pkg="autoturtle" name="sim" type="swim_school.py"/>
+
+</launch>

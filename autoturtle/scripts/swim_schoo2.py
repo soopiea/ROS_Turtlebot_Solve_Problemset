@@ -76,10 +76,12 @@ class ControlTurtlesim():
 
 	    # Linear speed in x in units/second: positive values imply forward,
         # negative values == backwards
-        move_cmd.linear.x = input('Linear Velocity: ')	# Modify this value to change the Turtle's speed
-
+        # move_cmd.linear.x = input('Linear Velocity: ')	# Modify this value to change the Turtle's speed
+        move_cmd.linear.x = 2	# Modify this value to change the Turtle's speed
         # Turn at 0 radians/s
-        move_cmd.angular.z = input('Angular Velocity: ')
+        # move_cmd.angular.z = input('Angular Velocity: ')
+        move_cmd.angular.z = 3
+
         # Modify this value to cause rotation rad/s
 
         first_pose_x = self.pose_x

@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="autoturtle" name="sim" type="swim_schoo2.py"/>
+
+</launch>
