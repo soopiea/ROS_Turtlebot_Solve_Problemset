@@ -11,6 +11,7 @@ from datetime import datetime, timedelta
 from turtlesim.srv import TeleportAbsolute
 
 
+
 class ControlTurtlesim():
 
     def __init__(self):
@@ -80,7 +81,8 @@ class ControlTurtlesim():
         move_cmd.linear.x = 2	# Modify this value to change the Turtle's speed
         # Turn at 0 radians/s
         # move_cmd.angular.z = input('Angular Velocity: ')
-        move_cmd.angular.z = 3
+        angular_val= rospy.get_param("/angular_vel")
+        move_cmd.angular.z = angular_val
 
         # Modify this value to cause rotation rad/s
 

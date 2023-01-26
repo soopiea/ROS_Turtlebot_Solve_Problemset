@@ -7,6 +7,7 @@ from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 import time
 import math
+import time
 
 class ControlTurtlesim():
 
@@ -71,10 +72,12 @@ class ControlTurtlesim():
 
 	    # Linear speed in x in units/second: positive values imply forward,
         # negative values == backwards
-        move_cmd.linear.x = input('Linear Velocity: ')	# Modify this value to change the Turtle's speed
+        x_val = rospy.get_param("/x_val")
+        move_cmd.linear.x = x_val	# Modify this value to change the Turtle's speed
+        time.sleep(1)
 
         # Turn at 0 radians/s
-        z_input = input('Angular Velocity: ')
+        z_input = rospy.get_param("/z_val")
         move_cmd.angular.z = z_input
         # Modify this value to cause rotation rad/s
 

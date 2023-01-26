@@ -1,0 +1,5 @@
+<launch>
+    <param name="angular_vel" type="int" value="3" />
+    <node pkg="autoturtle" name="sim" type="swim_school2.py"/>
+
+</launch>
